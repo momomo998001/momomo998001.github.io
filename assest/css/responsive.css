@@ -21,7 +21,7 @@
     and (device-width : 375px) 
     and (device-height : 812px) {
     body {
-        width: 204%;
+        width: 104%;
     }
 
     .header {

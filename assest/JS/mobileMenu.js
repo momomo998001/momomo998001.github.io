@@ -15,20 +15,20 @@ mobileMenu.onclick = function() {
     }
 }
 
-var menuItems = document.querySelectorAll('#nav li a[href*=""]')
-// console.log(menuItems)
-for (var i = 0; i < menuItems.length; i++){
-    var menuItem = menuItems[i]
+// var menuItems = document.querySelectorAll('#nav li a[href*=""]')
+// // console.log(menuItems)
+// for (var i = 0; i < menuItems.length; i++){
+//     var menuItem = menuItems[i]
 
-    // console.log(menuItem.nextElementSibling)
+//     // console.log(menuItem.nextElementSibling)
 
-    menuItem.onclick = function(event) {
-        var isParentMenu =this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
-        // console.log(this)
-        if (!isParentMenu) {
-            header.style.height = null
-        }else{
-            event.preventDefault();
-        }
-    }
-}
+//     menuItem.onclick = function(event) {
+//         var isParentMenu =this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+//         // console.log(this)
+//         if (!isParentMenu) {
+//             header.style.height = null
+//         }else{
+//             event.preventDefault();
+//         }
+//     }
+// }

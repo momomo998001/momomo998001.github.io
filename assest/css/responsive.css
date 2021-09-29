@@ -66,13 +66,27 @@
         display: block;
     }
 
-    /* .header-iconmenu-mobile > span {
+    .header-iconmenu-mobile > span {
         background: #000;
         height: 2px;
         width: 100%;
         right: 0;
         position: absolute;
-    } */
+    }
+    .header-iconmenu-mobile span:nth-last-of-type(1) {
+        top: 0;
+        transform-origin: left;
+    }
+
+    .header-iconmenu-mobile span:nth-last-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .header-iconmenu-mobile span:nth-last-of-type(3) {
+        bottom: 0;
+        transform-origin: left;
+    }
 
     .nav-show {
         width: 100%;

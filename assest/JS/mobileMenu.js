@@ -1,34 +1,21 @@
-var header = document.getElementById('header')
-var mobileMenu = document.getElementById('mobile-menu')
-// console.log(header)
-// console.log(mobileMenu)
 
-var headerHeight = header.clientHeight
- 
-mobileMenu.onclick = function() {
-    var isClosed = header.clientHeight === headerHeight
-    // var isClosed = header.clientHeight === 68
-    if (isClosed) {
-        header.style.height = 'auto'
-    } else {
-        header.style.height = null
+function activeMenu(x){
+    x.classList.toggle("change")
+    var x = document.getElementById("nav")
+    if (x.className === "header-nav") {
+        x.className += " auto"
+    }else{
+        x.className = "header-nav"
     }
 }
 
-// var menuItems = document.querySelectorAll('#nav li a[href*=""]')
-// // console.log(menuItems)
-// for (var i = 0; i < menuItems.length; i++){
-//     var menuItem = menuItems[i]
+function showNav() {
+    var y = document.getElementById("showSubnav")
+    if (y.className === "nav-item") {
+        y.className += " active"
+    }else{
+        y.className = "nav-item"
+    }
+}
 
-//     // console.log(menuItem.nextElementSibling)
 
-//     menuItem.onclick = function(event) {
-//         var isParentMenu =this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
-//         // console.log(this)
-//         if (!isParentMenu) {
-//             header.style.height = null
-//         }else{
-//             event.preventDefault();
-//         }
-//     }
-// }

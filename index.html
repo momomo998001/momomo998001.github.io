@@ -20,7 +20,7 @@
 
 <body>
 
-    <header class="header" id="header">
+    <header class="header" id="header-scroll">
         <div class="container">
             <div class="header-wrapper">
                 <a href="" class="header-logo">
@@ -31,15 +31,15 @@
                 <ul class="header-nav" id="nav">
                     <li><a href="">About Us</a></li>
                     <li><a href="">Services</a></li>
-                    <li>
-                        <a class="nav-show" href="">
+                    <li id="showSubnav" class="nav-item" onclick="showNav()">
+                        <a class="nav-show" href="#">
                             Showcases
                             <!-- <i class="nav-down fas fa-chevron-down"></i> -->
                         </a>
                         <img class="nav-down" src="./assest/img/icon/icon-angle-down.svg" alt="">
-                        <ul class="header-nav-subnav">
+                        <ul class="header-nav-subnav" >
                             <li class="subnav-item"><a href="">Apps</a></li>
-                            <li class="subnav-item"><a href="">Games</a></li>
+                            <li class="subnav-item item-game"><a href="">Games</a></li>
                         </ul>
                     </li>
                     <li><a href="">Blogs</a></li>
@@ -51,7 +51,7 @@
                 <div class="header-btn">
                     <button class="btn">Get a free quote!</button>
                     <!-- <i id="mobile-menu" class="header-iconmenu-mobile fas fa-bars"></i> -->
-                    <div id="mobile-menu" class="header-iconmenu-mobile">
+                    <div id="mobile-menu" class="header-iconmenu-mobile" onclick="activeMenu(this)">
                         <span></span>
                         <span></span>
                         <span></span>

@@ -260,12 +260,12 @@ p {
     margin: 0;
 }
 
-.baner-typing {
+.banner-typing {
     color: var(--main-orange);
     /* font-weight: 400; */
 }
 
-.baner-typing::after {
+.banner-typing::after {
     content: "";
     position: absolute;
     width: 1px;

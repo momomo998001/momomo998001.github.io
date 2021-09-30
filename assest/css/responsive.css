@@ -1,29 +1,4 @@
-/* @media (max-width: 1024px) {
-    .header {
-        
-    }
-
-    .section {
-
-    }
-
-    .section-banner {
-
-    }
-} */
-
-@media (max-width:739px) {
-
-}
-
-
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) {
-    body {
-        width: 104%;
-    }
-
+@media (max-width: 1024px) {
     .header {
         padding: 15px 0;
         position: fixed;
@@ -37,9 +12,13 @@
         /* padding: 15px 0; */
     }
 
-    .header-logo-des,
-    .header-btn > .btn {
+    .header-logo-des{
         display: none;
+    }
+
+    .header-btn > .btn {
+        font-size: 14px;
+        padding: 10px 25px;
     }
 
     .header-nav {
@@ -53,16 +32,12 @@
         height: 0;
         position: absolute;
         border-top: 1px solid #c8c7cc;
-        transition: 0.3 ease;
+        transition: all .3s ease-in-out;
     }
 
     .header-nav.auto {
-        height: calc(100vh - 68px);
+        height: calc(110vh - 68px);
     }
-
-    /* .header .header-wrapper > .header-nav {
-        border-top: 1px solid #c8c7cc;
-    } */
 
     .header-nav > li {
         flex-wrap: wrap;
@@ -91,9 +66,9 @@
         padding: 0 15px;
     }
 
-    /* .item-game {
-        margin-bottom: 0;
-    } */
+    .header-nav .nav-item:hover>.nav-show::before {
+        transform: scaleX(0);
+    }
 
     .header-nav .nav-item.active>.header-nav-subnav {
         display: block;
@@ -102,6 +77,10 @@
 /*  */
     .header-nav .nav-item.active>.nav-show {
         color: var(--main-orange);
+    }
+
+    .header-nav .nav-item.active>.nav-show::before{
+        transform: scaleX(1)!important;
     }
 
     .header-nav .nav-item.active .nav-down {
@@ -132,6 +111,7 @@
         width: 100%;
         right: 0;
         position: absolute;
+        transition: 0.3s ease;
     }
     .header-iconmenu-mobile span:nth-last-of-type(1) {
         top: 0;
@@ -170,13 +150,34 @@
         transform: rotate(-90deg);
     }
 
-    .mobile-button {
-        display: block;
-    }
-
     .btn.small {
         width: 100%;
         margin-bottom: 15px;
+    }
+
+    /* section */
+
+    
+}
+
+@media (max-width:739px) {
+
+}
+
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) {
+    body {
+        width: 104%;
+    }
+
+    .header-btn > .btn {
+        display: none;
+    }
+
+    .mobile-button {
+        display: block;
     }
 
     /* section */

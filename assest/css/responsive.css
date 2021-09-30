@@ -160,14 +160,7 @@
     
 }
 
-@media (max-width:739px) {
-
-}
-
-
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) {
+@media (max-width:739px){
     body {
         width: 104%;
     }

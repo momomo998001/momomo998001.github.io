@@ -1,68 +1,61 @@
-const   countUp = document.querySelector('.countUp-client'),
-        number = Number(countUp.innerHTML) + 1;
+var numbers = document.querySelectorAll('.number')
 
-let counter = 0,
-    delay = 1,
-    x = number / 2,
-    y = 0;
+function isElementInViewport(el) {
+    var rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    )
+}
 
-counter_js();
+function callbackfunc() {
+    for (var i = 0; i < numbers.length; i++) {
+        if (isElementInViewport(numbers[i])) {
+            if (numbers[0].textContent == 0) {
+                animateNumber(92, 6000, 0, function(number) {
+                    const formattedNumber = number.toLocaleString()
+                    numbers[0].innerText = formattedNumber
+                })
+            }
+            if (numbers[1].textContent == 0) {
+                animateNumber(60, 3000, 0, function(number) {
+                    const formattedNumber = number.toLocaleString()
+                    numbers[1].innerText = formattedNumber
+                })
+            }
+            if (numbers[2].textContent == 0) {
+                animateNumber(7, 500, 0, function(number) {
+                    const formattedNumber = number.toLocaleString()
+                    numbers[2].innerText = formattedNumber
+                })
+            }
+        }
+    }
+}
+window.addEventListener("scroll", callbackfunc)
+window.addEventListener("load", callbackfunc)
 
-function counter_js(){
-    y++;
-    delay = (x-y);
-    countUp.innerHTML = counter.toString();
-    counter++;
-    if (counter < number) {
-        setTimeout(function(){
-            counter_js();
+let n = 0
 
-        }, delay)
+function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+    let currentNumber = startNumber
+    const interval = window.setInterval(updateNumber, 17)
+
+    function updateNumber() {
+        if (currentNumber >= finalNumber) {
+            clearInterval(interval)
+        } else {
+            let inc = Math.ceil(finalNumber / (duration / 17))
+            if (currentNumber + inc > finalNumber) {
+                currentNumber = finalNumber
+                clearInterval(interval)
+            } else {
+                currentNumber += inc
+            }
+            callback(currentNumber)
+        }
     }
 }
 
-const   countUp2 = document.querySelector('.countUp-talent'),
-        number2 = Number(countUp2.innerHTML) + 1;
-
-let counter2 = 0,
-    delay2 = 1,
-    x2 = number2 / 2,
-    y2 = 0;
-
-counter2_js();
-
-function counter2_js(){
-    y2++;
-    delay2 = (x2-y2);
-    countUp2.innerHTML = counter2.toString();
-    counter2++;
-    if (counter2 < number2) {
-        setTimeout(function(){
-            counter2_js();
-
-        }, delay)
-    }
-}
-
-const   countUp3 = document.querySelector('.countUp-year'),
-        number3 = Number(countUp3.innerHTML) + 1;
-
-let counter3 = 0,
-    delay3 = 1,
-    x3 = number3 / 2,
-    y3 = 0;
-
-counter3_js();
-
-function counter3_js(){
-    y3++;
-    delay3 = (x3-y3);
-    countUp3.innerHTML = counter3.toString();
-    counter3++;
-    if (counter3 < number3) {
-        setTimeout(function(){
-            counter3_js();
-
-        }, delay)
-    }
-}

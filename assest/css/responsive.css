@@ -153,17 +153,13 @@
         width: 100%;
         margin-bottom: 15px;
     }
-
-    /* section */
-
     
 }
 
 @media (max-width:768px){
-
-    html {
-       width: 150%;
-    }
+    /* html {
+        width: 108%;
+    } */
 
     .header-btn > .btn {
         display: none;
@@ -183,11 +179,14 @@
         padding-top: 15px;
     }
 
-    .section-banner-img,
     .section-banner-item {
         max-width: 600px;
         padding:  0 15px;
         margin-bottom: 15px;
+    }
+
+    .section-banner-img {
+
     }
 
     .banner-title {
@@ -285,14 +284,14 @@
     }
 
 
-    .service-item-wrapper {
+    .section-services .services-wrapper .service-item.service-item-wrapper {
        padding: 30px 15px;
     }
 
     .service-item-img {
         /* max-width: 300px;
-        height: 210px;
-        margin: 0 auto 30px; */
+        height: 210px; */
+        margin: 0 auto 30px;
     }
 
     .service-item-title {

@@ -227,7 +227,7 @@ p {
 
 
 .section{
-    
+
 }
 
 /*Begin Section banner */
@@ -256,7 +256,8 @@ p {
     margin: 0;
 }
 
-.banner-typing {
+.banner-typing,
+.typing-cursor {
     color: var(--main-orange);
     /* font-weight: 400; */
 }
@@ -313,6 +314,11 @@ p {
 
 .section-banner-img {
     max-width: 680px;
+}
+
+.img-service {
+    height: 100%;
+    width: 100%;
 }
 
 .banner-img {

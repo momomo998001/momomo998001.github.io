@@ -160,8 +160,9 @@
 }
 
 @media (max-width:768px){
+
     html {
-        width: 104%;
+       width: 150%;
     }
 
     .header-btn > .btn {

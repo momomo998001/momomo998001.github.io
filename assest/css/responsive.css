@@ -9,7 +9,6 @@
     .header.active {
         animation: none;
         transform: translateY(0);
-        /* padding: 15px 0; */
     }
 
     .header-logo-des{
@@ -160,8 +159,8 @@
     
 }
 
-@media (max-width:739px){
-    body {
+@media (max-width:768px){
+    html {
         width: 104%;
     }
 
@@ -175,7 +174,6 @@
 
     /* section */
     .section {
-
     }
 
     .section-banner {
@@ -373,4 +371,7 @@
     .footer-language {
 
     }
+}
+@media (max-width:576px) {
+
 }

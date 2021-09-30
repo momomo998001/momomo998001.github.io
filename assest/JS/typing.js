@@ -20,4 +20,3 @@ let letter = '';
     }
     setTimeout(type, 200);
 })();
-

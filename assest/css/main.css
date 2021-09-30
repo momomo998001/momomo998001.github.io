@@ -9,14 +9,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    line-height: 1.15;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
-
 
 li {
     list-style: none !important;
@@ -232,6 +227,7 @@ p {
 
 
 .section{
+    /* width: 100%; */
 }
 
 /*Begin Section banner */
